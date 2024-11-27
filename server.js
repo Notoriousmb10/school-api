@@ -11,6 +11,11 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('API is up and running!');
+});
+
+
 app.use('/api', schoolRoutes);
 
 app.listen(PORT, () => {

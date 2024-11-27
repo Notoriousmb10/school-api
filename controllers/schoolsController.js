@@ -1,7 +1,7 @@
 const db = require('../database/db');
 const calculateDistance = require('../utils/calculateDistance');
 
-// Add School API
+
 const addSchool = async (req, res) => {
   const { name, address, latitude, longitude } = req.body;
 
@@ -21,7 +21,7 @@ const addSchool = async (req, res) => {
   }
 };
 
-// List Schools API
+
 const listSchools = async (req, res) => {
   const { latitude, longitude } = req.query;
 
