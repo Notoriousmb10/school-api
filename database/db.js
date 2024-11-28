@@ -8,5 +8,13 @@ const pool = mysql.createPool({
   port: process.env.DB_PORT 
 });
 
+
+connection.connect((err) => {
+  if (err) {
+    return res.status(500).json({ message: 'Database connection error', error: err });
+  }
+  return res.status(200).json({ message: 'Database connected successfully!' });
+});
+
 const db = pool.promise();
 module.exports = db;
