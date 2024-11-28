@@ -9,7 +9,7 @@ const pool = mysql.createPool({
 });
 
 
-connection.connect((err) => {
+pool.connect((err) => {
   if (err) {
     return res.status(500).json({ message: 'Database connection error', error: err });
   }
